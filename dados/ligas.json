@@ -1,0 +1,6 @@
+[
+  { "id": "PT1", "nome": "Liga Portugal",      "pais": "POR", "escalao": 1, "formato": "europeu",    "artigo": "{epoca} Primeira Liga" },
+  { "id": "PT2", "nome": "Liga Portugal 2",    "pais": "POR", "escalao": 2, "formato": "europeu",    "artigo": "{epoca} Liga Portugal 2" },
+  { "id": "BR1", "nome": "Brasileirão Série A", "pais": "BRA", "escalao": 1, "formato": "brasileiro", "artigo": "{epoca} Campeonato Brasileiro Série A" },
+  { "id": "BR2", "nome": "Brasileirão Série B", "pais": "BRA", "escalao": 2, "formato": "brasileiro", "artigo": "{epoca} Campeonato Brasileiro Série B" }
+]

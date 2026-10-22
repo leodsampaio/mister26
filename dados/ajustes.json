@@ -1,0 +1,6 @@
+{
+  "_comentario": "Correções manuais que se sobrepõem ao automático. Chave = id da equipa (ver equipas.json). Campos aceites: nome, nomeCurto, nivel, cor1, cor2.",
+  "s-l-benfica":            { "nomeCurto": "Benfica" },
+  "sporting-cp":            { "nomeCurto": "Sporting" },
+  "fc-porto":               { "nomeCurto": "FC Porto" }
+}

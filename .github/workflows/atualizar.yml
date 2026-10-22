@@ -1,0 +1,23 @@
+name: Atualizar planteis
+on:
+  schedule:
+    - cron: '0 4 * * 1'   # todas as segundas às 04:00 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node robo/atualizar.mjs
+      - name: Guardar alterações
+        run: |
+          git config user.name "robo-mister26"
+          git config user.email "robo@mister26.local"
+          git add dados/
+          git diff --cached --quiet || git commit -m "Planteis atualizados $(date -u +%F)"
+          git push
