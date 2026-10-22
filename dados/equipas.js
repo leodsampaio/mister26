@@ -1,5 +1,5 @@
 window.DADOS_EQUIPAS = {
- "gerado": "2026-10-22T14:15:38.766Z",
+ "gerado": "2026-10-22T14:30:18.959Z",
  "fonte": "en.wikipedia.org (CC BY-SA 4.0)",
  "divisoes": [
   {
@@ -2665,7 +2665,7 @@ window.DADOS_EQUIPAS = {
    "nivel": 20,
    "cor1": "#0122EB",
    "cor2": "#0122EB",
-   "estadio": "Estádio do Dragão|italic=no",
+   "estadio": "Estádio do Dragão",
    "capacidade": 50033,
    "treinador": "Francesco Farioli",
    "posicaoAnterior": 1,
@@ -8230,7 +8230,7 @@ window.DADOS_EQUIPAS = {
    "nivel": 4,
    "cor1": "#000000",
    "cor2": "#000000",
-   "estadio": "Estádio Municipal de Amarante|italic=no",
+   "estadio": "Estádio Municipal de Amarante",
    "capacidade": 5000,
    "treinador": "Hélder Queirós (interim)",
    "posicaoAnterior": null,
