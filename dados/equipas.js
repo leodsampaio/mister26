@@ -1,5 +1,5 @@
 window.DADOS_EQUIPAS = {
- "gerado": "2026-10-22T13:40:25.926Z",
+ "gerado": "2026-10-22T14:15:38.766Z",
  "fonte": "en.wikipedia.org (CC BY-SA 4.0)",
  "divisoes": [
   {
