@@ -716,6 +716,7 @@
     Atualizador.automatico();
   }
 
-  window.Jogo = { iniciar, atualizarTudo, get estado() { return estado; }, dadosBase, CHAVE_DADOS };
+  window.Jogo = { iniciar, atualizarTudo, get estado() { return estado; }, dadosBase, CHAVE_DADOS, gravar, jogar, mostrarPagina,
+    dialogos: { dlgClassificacao, dlgMarcadores, dlgCalendario, dlgPlantel, dlgProcurar, dlgBalanco, dlgEmprestimo, dlgEstadio, dlgHistorialEquipa, dlgTransferencias, dlgVencedores, dlgHistoriaTreinador, dlgRanking, dlgTreinadores, dlgPerfil, dlgOpcoes, dlgRegisto, dlgAcerca, dlgResultados, fimDeEpoca } };
   window.addEventListener('DOMContentLoaded', iniciar);
 })();
