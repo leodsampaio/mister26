@@ -69,7 +69,7 @@ export function limparTexto(s) {
   return s
     .replace(/<ref[^>]*\/>/g, ' ')
     .replace(/<ref[^>]*>[\s\S]*?<\/ref>/g, ' ')
-    .replace(/\{\{\s*(?:nowrap|nobreak|small|lang\|[a-z-]+)\s*\|([^{}]*)\}\}/gi, '$1')
+    .replace(/\{\{\s*(?:nowrap|nobreak|small|lang\|[a-z-]+)\s*\|([^{}|]*)(?:\|[^{}]*)?\}\}/gi, '$1')
     .replace(/\{\{[^{}]*\}\}/g, '')
     .replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1')
     .replace(/'''?/g, '')
