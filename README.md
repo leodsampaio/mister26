@@ -1,5 +1,7 @@
 # Mister 26
 
+**Jogar agora:** https://leodsampaio.github.io/mister26/ · Repositório: https://github.com/leodsampaio/mister26
+
 Jogo de gestão de futebol inspirado no **Elifoot 98**, reconstruído em HTML, CSS e JavaScript puro, com o mesmo layout de janelas (Windows 95 / Delphi 1, verde e amarelo) e planteis de 2026 que se **atualizam sozinhos** a partir da Wikipédia.
 
 Sem instalação, sem servidor obrigatório, sem chaves de API. Tudo em português.
@@ -38,14 +40,9 @@ node robo/atualizar.mjs
 
 Requisitos: Node.js 22 ou mais recente. Sem dependências npm.
 
-## Publicar no GitHub (para a atualização semanal)
+## Publicação
 
-```bash
-git remote add origin https://github.com/SEU-UTILIZADOR/mister26.git
-git push -u origin main
-```
-
-Depois, em *Settings → Pages*, escolha a branch `main` e a pasta raiz. O workflow já tem permissão de escrita; na primeira vez corra-o em *Actions → Atualizar planteis → Run workflow*.
+O jogo está publicado no GitHub Pages a partir da branch `main` (pasta raiz). O workflow *Atualizar planteis* corre todas as segundas-feiras e também pode ser lançado à mão em *Actions → Atualizar planteis → Run workflow*; cada execução que mude os planteis faz um commit e o Pages republica o jogo em poucos minutos.
 
 ## O que está implementado
 

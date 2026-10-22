@@ -3,7 +3,7 @@
 // Licença dos dados: CC BY-SA 4.0 (Wikipédia). Nomes de clubes e jogadores são factos públicos.
 
 const API = 'https://en.wikipedia.org/w/api.php';
-const AGENTE = 'Mister26/0.1 (jogo pessoal de gestao de futebol; sem fins comerciais)';
+const AGENTE = 'Mister26/0.1 (https://github.com/leodsampaio/mister26; jogo pessoal, sem fins comerciais)';
 
 export const POSICOES = ['GR', 'DEF', 'MED', 'AVA'];      // 0..3, como no original
 const MAPA_POS = { GK: 0, DF: 1, MF: 2, FW: 3, DEF: 1, MID: 2, FWD: 3, GR: 0, MED: 2, AVA: 3 };
@@ -32,8 +32,17 @@ async function wikitexto(pagina, fetchFn) {
   });
   const opcoes = { headers: { 'Api-User-Agent': AGENTE } };
   if (typeof window === 'undefined') opcoes.headers['User-Agent'] = AGENTE;
-  const r = await fetchFn(url, opcoes);
-  if (!r.ok) throw new Error(`HTTP ${r.status} em ${pagina}`);
+  let r;
+  for (let tentativa = 1; ; tentativa++) {
+    r = await fetchFn(url, opcoes);
+    if (r.ok) break;
+    if ((r.status === 429 || r.status >= 500) && tentativa < 6) {
+      const espera = Math.max(+(r.headers.get('retry-after') || 0) * 1000, 2000 * Math.pow(2, tentativa - 1));
+      await new Promise(res => setTimeout(res, espera));
+      continue;
+    }
+    throw new Error(`HTTP ${r.status} em ${pagina}`);
+  }
   const j = await r.json();
   if (j.error) return null;
   return j.parse.wikitext;
@@ -242,6 +251,7 @@ export async function recolherTudo(ligas, { fetchFn = globalThis.fetch, pausaMs 
 
   for (const liga of ordenadas) {
     let epoca = epocaAtual(liga.formato);
+    await dormir(pausaMs);
     let w = await wikitexto(liga.artigo.replace('{epoca}', epoca.rotulo), fetchFn);
     let clubes = w ? extrairClubesDaEpoca(w) : [];
     if (clubes.length < 8) {

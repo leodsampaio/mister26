@@ -13,7 +13,8 @@ const ligas = await ler('dados/ligas.json');
 const ajustes = await ler('dados/ajustes.json').catch(() => ({}));
 delete ajustes._comentario;
 
-const dados = await recolherTudo(ligas, { ajustes, log: m => console.log(m) });
+const pausaMs = +(process.env.MISTER26_PAUSA_MS || (process.env.GITHUB_ACTIONS ? 1500 : 300));
+const dados = await recolherTudo(ligas, { ajustes, pausaMs, log: m => console.log(m) });
 
 const total = Object.values(dados.equipas).reduce((s, e) => s + e.jogadores.length, 0);
 const fracas = Object.values(dados.equipas).filter(e => e.jogadores.length < 14).map(e => e.nomeCurto);

@@ -712,11 +712,32 @@
     rodape(); ajustarEscala(); window.addEventListener('resize', ajustarEscala);
     document.addEventListener('keydown', ev => { if (ev.ctrlKey && ev.altKey && ev.key.toLowerCase() === 'c' && estado) CheatOMatic.abrir(estado, atualizarTudo); });
     if (!window.DADOS_EQUIPAS && !localStorage.getItem(CHAVE_DADOS)) { mensagem('Não encontrei o ficheiro dados/equipas.js. Corra "node robo/atualizar.mjs" para gerar os planteis.', { tipo: 'erro' }); return; }
+    if (location.hash.startsWith('#demo')) { demo(location.hash.slice(6)); return; }
     ecraInicial();
     Atualizador.automatico();
   }
 
-  window.Jogo = { iniciar, atualizarTudo, get estado() { return estado; }, dadosBase, CHAVE_DADOS, gravar, jogar, mostrarPagina,
+  // Modo de demonstração (#demo=equipa,ecra,jornadas): abre um jogo pronto para capturas de ecrã.
+  function demo(args) {
+    const [equipaId, ecra, jornadas] = (args || '').split(',');
+    const dados = dadosBase();
+    const paises = [...new Set(dados.divisoes.map(d => d.pais))];
+    estado = M.novoJogo({ dados, paises, treinadores: [{ nome: 'Mister', equipa: equipaId || undefined }] });
+    estado.treinadorAtual = 0; nomeJogo = 'DEMO';
+    for (let i = 0; i < (+jornadas || 0); i++) M.jogarJornada(estado);
+    estado.treinadores.forEach(t => { t.pronto = false; });
+    abrirPrincipal();
+    const e = equipaAtual();
+    if (ecra === 'classificacao') dlgClassificacao();
+    else if (ecra === 'plantel') dlgPlantel(e);
+    else if (ecra === 'cheat') CheatOMatic.abrir(estado, atualizarTudo);
+    else if (ecra === 'procurar') dlgProcurar();
+    else if (ecra === 'jogador') { jogadorSel = e.jogadores.find(j => j.titular && j.pos === 3) || e.jogadores[0]; mostrarPagina(1); atualizarTudo(); }
+    else if (ecra === 'relogio') { const g = M.jogoDe(estado, e.id); if (g) { const r = M.simularJogo(estado, g.casa, g.fora, M.arbitroPara(estado, g.casa.id)); r.publico = M.assistencia(estado, g.casa, g.fora); estado.opcoes.velocidade = 0; dlgRelogio(r, estado.jornada); } }
+    else if (ecra === 'selecao') mostrarPagina(3);
+  }
+
+  window.Jogo = { iniciar, demo, atualizarTudo, get estado() { return estado; }, dadosBase, CHAVE_DADOS, gravar, jogar, mostrarPagina,
     dialogos: { dlgClassificacao, dlgMarcadores, dlgCalendario, dlgPlantel, dlgProcurar, dlgBalanco, dlgEmprestimo, dlgEstadio, dlgHistorialEquipa, dlgTransferencias, dlgVencedores, dlgHistoriaTreinador, dlgRanking, dlgTreinadores, dlgPerfil, dlgOpcoes, dlgRegisto, dlgAcerca, dlgResultados, fimDeEpoca } };
   window.addEventListener('DOMContentLoaded', iniciar);
 })();
