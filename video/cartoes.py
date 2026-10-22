@@ -63,6 +63,7 @@ icones = ''.join(f'<div class="icone" style="left:{x}px;top:{y}px"><div class="i
 expl = janela(300, 420, 720, 'C:\\ELIFOOT', '<div class="lista" style="font-size:30px">' + ''.join(f'<div{" class=sel" if n == "ELIFOOT.EXE" else ""}><span>{e}</span><span>{n}</span><span style="margin-left:auto;font-weight:normal">{s}</span></div>' for e, n, s in [('⚽', 'ELIFOOT.EXE', '836 KB'), ('📝', 'EDITEQ.EXE', '472 KB'), ('📁', 'EQUIPAS', '195 ficheiros'), ('📁', 'FLAGS', '218 ficheiros'), ('🧩', 'GAUGE.VBX', '8 KB'), ('🧩', 'BIVBX11.DLL', '80 KB')]) + '</div><div style="margin-top:14px;font-size:24px">6 objetos&nbsp;&nbsp;1,37 MB</div>')
 ano = '<div class="grande amarelo sombra centro" style="position:absolute;left:0;right:0;top:1080px;font-size:200px">1998</div><div class="medio branco sombra centro" style="position:absolute;left:0;right:0;top:1320px">um monitor de tubo, um disquete e horas de campeonato</div>'
 cartoes['desktop98'] = f'<body>{icones}{expl}{ano}{tarefa("23:58")}</body>'
+cartoes['desktop98b'] = f'<body>{icones}{expl}{tarefa("23:59")}</body>'
 
 # --- título Mister 26
 corpo = ('<div class="bevel" style="padding:40px 30px;text-align:center"><div style="font-size:150px;line-height:1">MISTER 26</div>'
