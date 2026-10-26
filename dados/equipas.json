@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-22T14:30:18.959Z",
+ "gerado": "2026-10-26T04:24:13.205Z",
  "fonte": "en.wikipedia.org (CC BY-SA 4.0)",
  "divisoes": [
   {
@@ -1682,7 +1682,7 @@
    "nivel": 18,
    "cor1": "#FFFFFF",
    "cor2": "#FFFFFF",
-   "estadio": "Estádio Municipal 22 de JunhoVila Nova de Famalicão",
+   "estadio": "Estádio Municipal 22 de Junho",
    "capacidade": 5186,
    "treinador": "vacant",
    "posicaoAnterior": 5,
@@ -5308,7 +5308,7 @@
     },
     {
      "nome": "Kaique Kenji",
-     "nac": "JAP",
+     "nac": "BRA",
      "pos": 3,
      "num": 70
     },
@@ -8232,7 +8232,7 @@
    "cor2": "#000000",
    "estadio": "Estádio Municipal de Amarante",
    "capacidade": 5000,
-   "treinador": "Hélder Queirós (interim)",
+   "treinador": "Renato Coimbra",
    "posicaoAnterior": null,
    "promovido": true,
    "despromovido": false,
