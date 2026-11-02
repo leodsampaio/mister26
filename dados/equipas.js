@@ -1,5 +1,5 @@
 window.DADOS_EQUIPAS = {
- "gerado": "2026-10-26T04:24:13.205Z",
+ "gerado": "2026-11-02T04:45:58.308Z",
  "fonte": "en.wikipedia.org (CC BY-SA 4.0)",
  "divisoes": [
   {
@@ -550,7 +550,7 @@ window.DADOS_EQUIPAS = {
    "cor2": "#0000FF",
    "estadio": "Estádio Municipal de Arouca",
    "capacidade": 5600,
-   "treinador": "Vasco Seabra",
+   "treinador": "Vítor Severino",
    "posicaoAnterior": 8,
    "promovido": false,
    "despromovido": false,
@@ -1280,7 +1280,7 @@ window.DADOS_EQUIPAS = {
    "cor2": "#0033FF",
    "estadio": "Estádio António Coimbra da Mota",
    "capacidade": 5094,
-   "treinador": "Vasco Matos",
+   "treinador": "Leandro Pires (caretaker)",
    "posicaoAnterior": 10,
    "promovido": false,
    "despromovido": false,
@@ -1684,7 +1684,7 @@ window.DADOS_EQUIPAS = {
    "cor2": "#FFFFFF",
    "estadio": "Estádio Municipal 22 de Junho",
    "capacidade": 5186,
-   "treinador": "vacant",
+   "treinador": "Ricardo (caretaker)",
    "posicaoAnterior": 5,
    "promovido": false,
    "despromovido": false,
@@ -3246,7 +3246,7 @@ window.DADOS_EQUIPAS = {
    "cor2": "#000000",
    "estadio": "Estádio José Alvalade",
    "capacidade": 52095,
-   "treinador": "Rui Borges",
+   "treinador": "Tiago Fernandes (interim)",
    "posicaoAnterior": 2,
    "promovido": false,
    "despromovido": false,
@@ -10825,7 +10825,7 @@ window.DADOS_EQUIPAS = {
    "cor2": "#003B6F",
    "estadio": "Estádio Manuel Marques",
    "capacidade": 2431,
-   "treinador": "Luís Tralhão",
+   "treinador": "João Nuno",
    "posicaoAnterior": 3,
    "promovido": false,
    "despromovido": false,
@@ -12844,6 +12844,12 @@ window.DADOS_EQUIPAS = {
      "num": 2
     },
     {
+     "nome": "Reverson",
+     "nac": "BRA",
+     "pos": 1,
+     "num": 6
+    },
+    {
      "nome": "Douglas Baggio",
      "nac": "BRA",
      "pos": 3,
@@ -12886,12 +12892,6 @@ window.DADOS_EQUIPAS = {
      "num": 14
     },
     {
-     "nome": "David Braw",
-     "nac": "BRA",
-     "pos": 2,
-     "num": 16
-    },
-    {
      "nome": "Thiaguinho",
      "nac": "BRA",
      "pos": 3,
@@ -12932,6 +12932,12 @@ window.DADOS_EQUIPAS = {
      "nac": "BRA",
      "pos": 0,
      "num": 23
+    },
+    {
+     "nome": "Estêvão",
+     "nac": "BRA",
+     "pos": 2,
+     "num": 26
     },
     {
      "nome": "Fábio Alemão",
@@ -13000,15 +13006,33 @@ window.DADOS_EQUIPAS = {
      "num": 77
     },
     {
+     "nome": "Ygor Catatau",
+     "nac": "BRA",
+     "pos": 3,
+     "num": 95
+    },
+    {
      "nome": "Dadá Belmonte",
      "nac": "BRA",
      "pos": 3,
      "num": 97
     },
     {
+     "nome": "Saymom",
+     "nac": "BRA",
+     "pos": 3,
+     "num": 99
+    },
+    {
      "nome": "Cândido",
      "nac": "BRA",
      "pos": 0,
+     "num": null
+    },
+    {
+     "nome": "Anderson Dias",
+     "nac": "BRA",
+     "pos": 2,
      "num": null
     }
    ]
@@ -13067,7 +13091,7 @@ window.DADOS_EQUIPAS = {
      "num": 7
     },
     {
-     "nome": "Guilherme Lobo",
+     "nome": "Gui Lobo",
      "nac": "BRA",
      "pos": 2,
      "num": 8
@@ -13081,7 +13105,7 @@ window.DADOS_EQUIPAS = {
     {
      "nome": "Jhonata Robert",
      "nac": "BRA",
-     "pos": 3,
+     "pos": 2,
      "num": 10
     },
     {
@@ -13103,24 +13127,6 @@ window.DADOS_EQUIPAS = {
      "num": 14
     },
     {
-     "nome": "Octávio Henrique",
-     "nac": "BRA",
-     "pos": 1,
-     "num": 15
-    },
-    {
-     "nome": "Steven Nufour",
-     "nac": "GHA",
-     "pos": 2,
-     "num": 18
-    },
-    {
-     "nome": "Thales",
-     "nac": "BRA",
-     "pos": 3,
-     "num": 19
-    },
-    {
      "nome": "João Carlos",
      "nac": "BRA",
      "pos": 3,
@@ -13131,6 +13137,12 @@ window.DADOS_EQUIPAS = {
      "nac": "BRA",
      "pos": 1,
      "num": 22
+    },
+    {
+     "nome": "Octávio Henrique",
+     "nac": "BRA",
+     "pos": 1,
+     "num": 30
     },
     {
      "nome": "Hiago Alves",
@@ -13155,12 +13167,6 @@ window.DADOS_EQUIPAS = {
      "nac": "BRA",
      "pos": 1,
      "num": 34
-    },
-    {
-     "nome": "Heitor Roca",
-     "nac": "BRA",
-     "pos": 1,
-     "num": 36
     },
     {
      "nome": "César Martins",
@@ -13229,21 +13235,9 @@ window.DADOS_EQUIPAS = {
      "num": 97
     },
     {
-     "nome": "Erick",
+     "nome": "Rômulo Júnior",
      "nac": "BRA",
      "pos": 1,
-     "num": null
-    },
-    {
-     "nome": "Rômulo",
-     "nac": "BRA",
-     "pos": 1,
-     "num": null
-    },
-    {
-     "nome": "Eliel Costa",
-     "nac": "BRA",
-     "pos": 2,
      "num": null
     }
    ]
@@ -13493,6 +13487,12 @@ window.DADOS_EQUIPAS = {
      "nac": "BRA",
      "pos": 0,
      "num": 1
+    },
+    {
+     "nome": "Lucas Gazal",
+     "nac": "BRA",
+     "pos": 1,
+     "num": 3
     },
     {
      "nome": "Luan Freitas",
@@ -13838,7 +13838,7 @@ window.DADOS_EQUIPAS = {
      "num": 35
     },
     {
-     "nome": "Kadu Souza",
+     "nome": "Kadu Sousa",
      "nac": "BRA",
      "pos": 3,
      "num": 40
@@ -15504,7 +15504,7 @@ window.DADOS_EQUIPAS = {
     {
      "nome": "Carlos de Pena",
      "nac": "URU",
-     "pos": 3,
+     "pos": 2,
      "num": 10
     },
     {
@@ -15604,10 +15604,10 @@ window.DADOS_EQUIPAS = {
      "num": 47
     },
     {
-     "nome": "Pedro Martins",
+     "nome": "Adriel",
      "nac": "BRA",
      "pos": 2,
-     "num": 48
+     "num": 54
     },
     {
      "nome": "Felipinho",
@@ -15620,6 +15620,12 @@ window.DADOS_EQUIPAS = {
      "nac": "BRA",
      "pos": 1,
      "num": 63
+    },
+    {
+     "nome": "Rafinha",
+     "nac": "BRA",
+     "pos": 1,
+     "num": 66
     },
     {
      "nome": "Augusto Pucci",
@@ -15640,6 +15646,12 @@ window.DADOS_EQUIPAS = {
      "num": 77
     },
     {
+     "nome": "Kervin Andrade",
+     "nac": "VEN",
+     "pos": 2,
+     "num": 80
+    },
+    {
      "nome": "Fernando Sobral",
      "nac": "BRA",
      "pos": 2,
@@ -15650,12 +15662,6 @@ window.DADOS_EQUIPAS = {
      "nac": "BRA",
      "pos": 1,
      "num": 96
-    },
-    {
-     "nome": "Kervin Andrade",
-     "nac": "VEN",
-     "pos": 2,
-     "num": null
     }
    ]
   },
@@ -15743,7 +15749,7 @@ window.DADOS_EQUIPAS = {
      "num": 13
     },
     {
-     "nome": "Samuel Lucas",
+     "nome": "Anderson Jesus",
      "nac": "BRA",
      "pos": 1,
      "num": 14
@@ -15839,13 +15845,13 @@ window.DADOS_EQUIPAS = {
      "num": 99
     },
     {
-     "nome": "Anderson Jesus",
+     "nome": "Breno Bora",
      "nac": "BRA",
      "pos": 1,
      "num": null
     },
     {
-     "nome": "Breno Bora",
+     "nome": "Samuel Lucas",
      "nac": "BRA",
      "pos": 1,
      "num": null
